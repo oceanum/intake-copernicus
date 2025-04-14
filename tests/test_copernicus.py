@@ -11,8 +11,8 @@ HERE = Path(__file__).parent
 
 
 logged = copernicusmarine.login(
-    username=os.getenv("COPERNICUS_USER"),
-    password=os.getenv("COPERNICUS_KEY"),
+    username=os.getenv("COPERNICUS_USER", "dummy_user"),
+    password=os.getenv("COPERNICUS_KEY", "dummy_key"),
     force_overwrite=True,
 )
 
