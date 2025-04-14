@@ -52,6 +52,9 @@ package-dir = {"" = "src"}
 [project.entry-points."intake.drivers"]
 "copernicus_marine" = "intake_copernicus.source:CopernicusMarineSource"
 
+[tool.setuptools.dynamic]
+version = {attr = "intake_copernicus.__version__"}
+
 # Mypy
 # ----
 
