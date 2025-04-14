@@ -19,7 +19,8 @@ license = {text = "MIT license"}
 dependencies = [
   "copernicusmarine",
   "intake",
-  "typer"
+  "jinja2",
+  "typer",
 ]
 dynamic = ["version"]
 
