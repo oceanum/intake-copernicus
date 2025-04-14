@@ -21,8 +21,8 @@ logged = copernicusmarine.login(
 def test_copernicus_marine_timeseries():
     source = CopernicusMarineSource(
         dataset_id="cmems_mod_glo_phy_my_0.083deg_P1D-m",
-        username=None,
-        password=None,
+        username=os.getenv("COPERNICUS_USER"),
+        password=os.getenv("COPERNICUS_KEY"),
         service="timeseries",
     )
     dset = source.to_dask()
@@ -33,8 +33,8 @@ def test_copernicus_marine_timeseries():
 def test_copernicus_marine_geoseries():
     source = CopernicusMarineSource(
         dataset_id="cmems_mod_glo_phy_my_0.083deg_P1D-m",
-        username=None,
-        password=None,
+        username=os.getenv("COPERNICUS_USER"),
+        password=os.getenv("COPERNICUS_KEY"),
         service="geoseries",
     )
     dset = source.to_dask()
@@ -53,8 +53,8 @@ def test_copernicus_marine_subset():
         maximum_depth=1,
         start_datetime="2020-01-01",
         end_datetime="2020-01-02",
-        username=None,
-        password=None,
+        username=os.getenv("COPERNICUS_USER"),
+        password=os.getenv("COPERNICUS_KEY"),
         service="geoseries",
     )
     dset = source.to_dask()
